@@ -1,0 +1,13 @@
+--- a/layers/openembedded-core/meta/recipes-core/busybox/busybox_1.24.1.bb	2019-08-08 14:39:12.662070778 +0800
++++ b/layers/openembedded-core/meta/recipes-core/busybox/busybox_1.24.1.bb	2019-08-07 11:56:20.344443348 +0800
+@@ -39,8 +39,9 @@
+            file://getopts.cfg \
+            file://resize.cfg \
+            ${@["", "file://init.cfg"][(d.getVar('VIRTUAL-RUNTIME_init_manager') == 'busybox')]} \
+-           ${@["", "file://mdev.cfg"][(d.getVar('VIRTUAL-RUNTIME_dev_manager') == 'busybox-mdev')]} \
++           file://mdev.cfg \
+            file://syslog.cfg \
++           file://fragment.cfg \
+            file://inittab \
+            file://rcS \
+            file://rcK \

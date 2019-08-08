@@ -1,0 +1,11 @@
+--- a/layers/meta-openembedded/meta-initramfs/recipes-bsp/images/initramfs-debug-image.bb	2019-08-02 17:50:22.397594540 +0800
++++ b/layers/meta-openembedded/meta-initramfs/recipes-bsp/images/initramfs-debug-image.bb	2019-08-07 11:55:31.527460127 +0800
+@@ -3,7 +3,7 @@
+ the Minimal RAM-based Initial Root Filesystem (initramfs), which one can use \
+ to check the hardware efficiently."
+ 
+-PACKAGE_INSTALL = "initramfs-debug busybox base-passwd ${ROOTFS_BOOTSTRAP_INSTALL}"
++PACKAGE_INSTALL = "initramfs-debug busybox base-passwd ${ROOTFS_BOOTSTRAP_INSTALL} cryptsetup cryptodev-module cryptodev-tests e2fsprogs rng-tools"
+ 
+ # Do not pollute the initrd image with rootfs features
+ IMAGE_FEATURES = ""
