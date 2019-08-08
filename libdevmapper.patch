@@ -1,0 +1,10 @@
+--- a/layers/meta-openembedded/meta-oe/recipes-support/lvm2/libdevmapper_2.02.171.bb	2019-08-01 12:06:52.674741836 +0800
++++ b/layers/meta-openembedded/meta-oe/recipes-support/lvm2/libdevmapper_2.02.171.bb	2019-08-01 12:07:35.290656814 +0800
+@@ -9,6 +9,7 @@
+ 
+ do_install() {
+     oe_runmake 'DESTDIR=${D}' -C libdm install
++    oe_runmake 'DESTDIR=${D}' -C tools install_device-mapper
+ }
+ 
+ RRECOMMENDS_${PN}_append_class-target = " lvm2-udevrules"
